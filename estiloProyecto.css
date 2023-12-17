@@ -20,6 +20,31 @@ body {
     background: rgba(10, 118, 169, 0.43);
 }
 
+/* Estilos específicos para dispositivos con pantalla pequeña (por ejemplo, teléfonos) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+        /* Otros estilos para pantallas pequeñas */
+    }
+}
+
+/* Estilos específicos para dispositivos con pantalla mediana (por ejemplo, tabletas) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+        /* Otros estilos para pantallas medianas */
+    }
+}
+
+/* Estilos específicos para dispositivos con pantalla grande (por ejemplo, computadoras de escritorio) */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 20px;
+        /* Otros estilos para pantallas grandes */
+    }
+}
+
+
 #contenedorGIF {
     text-align: center;
 }
