@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Valentina Rivarola y Paulina Ortiz" name="autor">
+    <meta content="Web de Caída Libre" name="web">
+    <meta name="description" content="Software orientado a problemas de caida libre de Fisica">
+    <meta name="keywords" content="Formulas, Fisica, Educacion">
+    <title>Caida Libre</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kalam:wght@300&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@500&family=Kalam:wght@300&display=swap"
+          rel="stylesheet">
+
+    <script type="text/javascript" src="Funciones.js"></script>
+
+    <link rel="stylesheet" href="estiloProyecto.css" type="text/css">
+
+    <link rel="shortcut icon" href="imagenes/icono.png">
+</head>
+
+<body>
+
+<header>
+    <nav id="barradeopciones">
+        <a href="index.html">INICIO</a>
+        <a href="pagina1.html">TEORÍA</a>
+    </nav>
+</header>
+
+<h1> CAÍDA LIBRE </h1>
+<h3 id="pregunta"> ¿Qué desea calcular? </h3>
+<div id="opciones">
+    <nav id="ops">
+        <ul>
+            <li><a href="#VelocidadFinal">Velocidad Final</a></li>
+            <li><a href="#PosicionFinal">Posicion Final</a></li>
+            <li><a href="#Tiempo">Tiempo</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="paracaidismo" id="caida">
+    <img src="imagenes/gifparcaidismo.gif" alt="persona tirandose de un precipicio">
+</div>
+
+<form id="VelocidadFinal" class="VelocidadFinal" name="VelocidadFinal">
+    <h2 class="velocidadfinal">VELOCIDAD FINAL</h2>
+    <div id="vo">
+        <p>
+            <label for="vI">V<sub>o</sub>:</label>
+            <input id="vI" type="number" name="velocidadInicial" onchange="Velocidad();verLetra(this.id, this.value)"/>
+            m/s
+        </p>
+        <p>
+            <label for="time">t: </label>
+            <input id="time" type="number" name="tiempo" onchange="Velocidad();verLetra(this.id, this.value)">
+            s
+        </p>
+        <p>
+            El valor de la gravedad es de 9.8 m/s <sup> 2 </sup>
+        </p>
+        <p>
+            <button id="boton1" name="boton1" onclick="mostrar_Resultado(this.id)">
+                <a id="C1" href="#VelocidadFinal">Calcular </a>
+            </button>
+        </p>
+        <label for="totalV"></label>
+        <input id="totalV" type="text" name="velocidad_total" class="BOTON1" disabled>
+
+    </div>
+</form>
+
+<form id="PosicionFinal" class="PosicionFinal" name="PosicionFinal">
+    <h2 class="posicionfinal">POSICIÓN FINAL</h2>
+    <div id="po">
+        <p>
+            <label for="v0">V<sub>o</sub>:</label>
+            <input id="v0" type="number" name="velocidadInicial" onchange="Posicion(); verLetra(this.id, this.value)"/>
+            m/s
+        </p>
+        <p>
+            <label for="ti">t: </label>
+            <input id="ti" type="number" name="tiempo" onchange="Posicion(); verLetra(this.id, this.value)"/>
+            s
+        </p>
+        <p>
+            <label for="altura">Y<sub>o</sub>: </label>
+            <input id="altura" type="number" name="altura" onchange="Posicion(); verLetra(this.id, this.value)"/>
+            m
+        </p>
+        <p>
+            El valor de la gravedad es de 9.8 m/s <sup> 2 </sup>
+        </p>
+        <p>
+            <button id="boton2" name="boton2" onclick="mostrar_Resultado(this.id)">
+                <a id="C2" href="#PosicionFinal">Calcular</a>
+            </button>
+        </p>
+        <label for="totalP"></label>
+        <input id="totalP" type="text" name="posicion_total" class="BOTON2" disabled>
+
+        <p>
+            <button id="botonCanvas" name="botonCanvas" onclick="setInterval(animarBart, 20)">
+                <a id="bc" href="#myCanvas">Animacion</a>
+            </button>
+        </p>
+    </div>
+</form>
+
+
+<form id="Tiempo" class="TiempoFinal" name="TiempoFinal">
+    <h2 class="tiempo">TIEMPO</h2>
+    <div id="t">
+        <p>
+            <label for="velocidadInicial">V<sub>o</sub>:</label>
+            <input id="velocidadInicial" type="number" name="velocidadInicial" onchange="Tiempo(); verLetra(this.id, this.value)"/>
+            m/s
+
+        </p>
+        <p>
+            <label for="vf"> V<sub>f</sub>:</label>
+            <input id="vf" type="number" name="velocidadFinal" onchange="Tiempo(); verLetra(this.id, this.value)"/>
+            m/s
+
+        </p>
+        <p>
+            El valor de la gravedad es de 9.8 m/s <sup> 2 </sup>
+        </p>
+
+        <button id="boton3" onclick="mostrar_Resultado(this.id)">
+            <a id="C3" href="#Tiempo">Calcular</a>
+        </button>
+
+        <label for="totalT"></label>
+        <input id="totalT" type="text" name="tiempo_total" class="BOTON3" disabled>
+    </div>
+</form>
+
+<div id="edificio" class="edificio">
+    <img src="imagenes/edificio.png" alt="edificio">
+</div>
+
+
+<div id="animacion">
+    <canvas id="myCanvas" class="canvasBart" width="500px" height="500px">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+</div>
+
+<p>
+<input id="mostrarResultados" type="radio" name="rad_mostrar-ocultar" value="val_mostrar" onclick="mostrar_ocultar(this.id)">
+<label for="mostrarResultados"> Resultados </label>
+</p>
+<p>
+    <input id="ocultarResultados" type="radio" name="rad_mostrar-ocultar" value="val_ocultar" onclick="mostrar_ocultar(this.id)">
+    <label for="ocultarResultados"> Ocultar Resultados </label>
+</p>
+
+<div name="Result" class="color-div">
+    <p>Velocidad Inicial:  </p>
+    <p>Tiempo: </p>
+    <p>Altura: </p>
+    <p>Posicion Final: </p>
+</div>
+
+<footer id="contacto">
+    <div class="piedepagina">
+        <div class="mail">
+            <h4>Contacto</h4>
+            <p>
+                Paulina Ortiz: 2202058@ucc.edu.ar
+            </p>
+            <p>
+                Valentina Rivarola: 2215233@ucc.edu.ar
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
