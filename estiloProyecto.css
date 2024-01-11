@@ -1,55 +1,57 @@
-h1 {
-    text-align: center;
-    font-size: 100px;
-    font-family: 'Kalam', cursive;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 2.5em;
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.paracaidismo {
-    margin-left: 27em;
-    padding-bottom: 10px;
+
+h1 {
+    padding: 10px;
+    color: black;
+}
+
+button {
+    color: crimson;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    font-size: xx-large;
+
+}
+
+#Si {
+    grid-row:  5;
+    grid-column: 5;
+}
+
+#No {
+    grid-row: 5;
+    grid-column: 6;
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    width: 1200px;
+    height: 600px;
+    align-items: center;
+    justify-items: center;
 }
 
 body {
-    margin: 0 0 0 0;
-    text-align: justify-all;
-    font-family: "Calibri Light";
-    line-height: 15px;
-    background: rgba(10, 118, 169, 0.43);
+    background-color: lavender;
 }
 
-/* Estilos específicos para dispositivos con pantalla pequeña (por ejemplo, teléfonos) */
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 20px;
-        /* Otros estilos para pantallas pequeñas */
-    }
+p {
+    font-size: xx-large;
+    justify-content: center;
+    color: pink;
 }
 
-/* Estilos específicos para dispositivos con pantalla mediana (por ejemplo, tabletas) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 18px;
-        /* Otros estilos para pantallas medianas */
-    }
-}
-
-/* Estilos específicos para dispositivos con pantalla grande (por ejemplo, computadoras de escritorio) */
-@media only screen and (min-width: 1025px) {
-    body {
-        font-size: 20px;
-        /* Otros estilos para pantallas grandes */
-    }
-}
-
-
-#contenedorGIF {
-    text-align: center;
-}
-
-.f1 {
+.pregunta {
     margin: 120px auto; /* Alinea verticalmente en el centro y establece el margen superior e inferior */
     width: 30%;
     text-align: center;
@@ -61,29 +63,8 @@ body {
     padding-bottom: 2.5em;
 }
 
-.f1 {
+.pregunta {
     background-color: lavender;
     border-radius: 10px;
     position: relative;
 }
-
-button {
-    border-radius: 7px;
-}
-
-#contenedorBotones {
-    display: flex;
-    justify-content: space-around; /* Esto distribuirá los botones de manera uniforme en el contenedor */
-}
-
-#botonSI, #botonNO {
-    text-align: center;
-    font-size: 25px;
-    font-weight: bolder;
-    font-family: "Calibri Light";
-    background-color: lightblue;
-    width: 15%;
-    padding: 10px; /* Añade un relleno para mejorar la apariencia */
-}
-
-

@@ -2,35 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="Pau Ortiz" name="autor">
-    <title> Hola xd </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xdd</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kalam:wght@300&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="estiloProyecto.css" type="text/css">
-
+    <link rel="stylesheet" href="estiloProyecto.css">
     <link rel="shortcut icon" href="imagenes/corazon.png">
+
+
+    <style>
+        #No {
+            grid-row: 5;
+            grid-column: 6;
+        }
+    </style>
 </head>
-
 <body>
-
-
-<div class="f1"> ¿Queres ser mi novio?</div>
-
-<p>
-<div id="contenedorBotones">
-    <button id="botonSI">
-        <a id="si" href="pagina1.html"> AFIRMATIVO </a>
-    </button>
-    <button id="botonNO">
-        <a id="no" href="pagina2.html"> FLASHEASTE </a>
-    </button>
+<div>
+    <h1 id="pregunta">¿Queres ser mi novio?</h1>
+    <section>
+        <button id="Si" href="pagina1.html">
+            <a id="botonSi" href="pagina1.html"> Si </a>
+        </button>
+        <button id="No">No</button>
+    </section>
 </div>
-</p>
 
-
+<script src="Funciones.js"></script>
 </body>
 </html>
